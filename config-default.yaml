@@ -1,5 +1,23 @@
+# FS ingestion credentials
 AWS_ACCESS_KEY_ID: ""
 AWS_SECRET_ACCESS_KEY: ""
 AWS_DEFAULT_REGION: ""
 AWS_BUCKET: ""
 POSTGRESQL_DB: ""
+
+# Remote access - https://docs.mlrun.org/en/latest/howto/remote.html#set-environment-variables-in-a-terminal
+
+# Remote URL to mlrun service
+MLRUN_DBPATH=""
+
+# Root artifact path on the remote server
+MLRUN_ARTIFACT_PATH=""
+
+# Iguazio platform username
+V3IO_USERNAME=""
+
+# V3IO data access API URL (copy from the services screen)
+V3IO_API=""
+
+# Iguazio V3IO data layer credentials (copy from your user settings)
+V3IO_ACCESS_KEY=""
