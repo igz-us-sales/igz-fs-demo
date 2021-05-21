@@ -11,7 +11,7 @@ POSTGRESQL_DB: ""
 MLRUN_DBPATH: ""
 
 # Root artifact path on the remote server
-MLRUN_ARTIFACT_PATH: ""
+MLRUN_ARTIFACT_PATH: "/User/artifacts/{{run.project}}/{{workflow.uid}}"
 
 # Iguazio platform username
 V3IO_USERNAME: ""
