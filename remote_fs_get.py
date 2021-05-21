@@ -1,13 +1,20 @@
 import os
-
+import yaml
 import mlrun.feature_store as fs
-from dotenv import load_dotenv
 from mlrun import set_environment
 
 
 def main():
-    # Load environment variables
-    load_dotenv()
+    # Load config
+    with open("config.yaml") as f:
+        config = yaml.safe_load(f)
+
+    # Set remote credentials
+    os.environ["MLRUN_DBPATH"] = config["MLRUN_DBPATH"]
+    os.environ["MLRUN_ARTIFACT_PATH"] = config["MLRUN_ARTIFACT_PATH"]
+    os.environ["V3IO_USERNAME"] = config["V3IO_USERNAME"]
+    os.environ["V3IO_API"] = config["V3IO_API"]
+    os.environ["V3IO_ACCESS_KEY"] = config["V3IO_ACCESS_KEY"]
 
     # Setup project
     project_name, artifact_path = set_environment(
